@@ -3,7 +3,7 @@
   "manifestVersion": "0.4",
   "id": "5bebb729-cf47-4937-b4b2-8f9b818d9655",
   "version": "1.0",
-  "name": "Maps",
+  "name": "Teams Simple Tab",
   "developer": {
       "name": "Example company",   
       "websiteUrl": "http://www.example.com",
@@ -22,7 +22,7 @@
       "88": "maps88.png"
     },
     "accentColor" : "#223344",
-    "configUrl": "https://teams-get-started-sample.azurewebsites.net/tabconfig.html",
+    "configUrl": "https://teams-simple-tab.azurewebsites.net/tabconfig.html",
     "canUpdateConfig": true
   }],
   "needsIdentity": false,

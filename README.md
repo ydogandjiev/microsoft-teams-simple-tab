@@ -1,4 +1,4 @@
-# Microsoft Teams 'Get Started' sample tab app
+# microsoft-teams-simple-tab
 
 This is a basic example tab app for Microsoft Teams.  When it is added to a channel, it enables the user to choose whether they want a Bing Map or a Google Map in their new tab.  When it is removed from a channel, it offers (pretend) options for the user to choose whether the map is deleted or retained online.
 
@@ -10,7 +10,7 @@ An [Office 365 account with access to Microsoft Teams](https://msdn.microsoft.co
 
 ## Run the app
 
-1. Download the [tab app package](https://github.com/OfficeDev/microsoft-teams-sample-get-started/blob/master/package/MapsTab.zip) for this sample.
+1. Download the [tab app package](https://github.com/ydogandjiev/microsoft-teams-simple-tab/blob/master/package/teams-simple-tab.zip) for this sample.
 2. Create a new team for testing, if necessary.  Click **Create team** at the bottom of the left-hand panel.
 3. Select the team from the left-hand panel, select **... (more options)** and then select **View Team**.  (Note: you must be the team owner, or on a team where the owner has allowed members to sideload.)
 4. Select the **Bots** tab, and then select **Sideload a bot or tab** on the lower right.
@@ -22,7 +22,7 @@ An [Office 365 account with access to Microsoft Teams](https://msdn.microsoft.co
 
 ## Adapt the app yourself
 
-This sample works because its [configuration page](https://msdn.microsoft.com/en-us/microsoft-teams/createconfigpage) and [removal options page](https://msdn.microsoft.com/en-us/microsoft-teams/updateremove#removing-a-tab) are already hosted in Azure at `https://teams-get-started-sample.azurewebsites.net`. If you want to adapt this sample, you'll need to edit them and host them yourself.
+This sample works because its [configuration page](https://msdn.microsoft.com/en-us/microsoft-teams/createconfigpage) and [removal options page](https://msdn.microsoft.com/en-us/microsoft-teams/updateremove#removing-a-tab) are already hosted in Azure at `https://teams-simple-tab.azurewebsites.net`. If you want to adapt this sample, you'll need to edit them and host them yourself.
 
 1. Clone the repo
 2. [Optional] Make a simple change to the visible text in the `public/tabconfig.html` and `public/tabremove.html` pages. This will help you later to verify your own copy of the tab is running.
@@ -33,7 +33,7 @@ This sample works because its [configuration page](https://msdn.microsoft.com/en
     2. Change `configUrl` to the new address of the `tabconfig.html` page from step 3.
     3. [Optional] Change `accentColor` to some color other than the default. This will help you later to verify your own copy of the tab is running.
 6. [Optional] Make a simple change to `maps44.png` and `maps88.png` in an image editor. This will help you later to verify your own copy of the tab is running.
-7. Zip up `manifest.json`, `maps44.png`, `maps88.png` into a new tab app package called `NewTab.zip`.  Note: icons must be < 1.5k in size.
+7. Zip up `manifest.json`, `maps44.png`, `maps88.png` into a new tab app package called `NewTab.zip`.
 8. Upload and test your new tab package, `NewTab.zip`, using the [instructions above](#run-the-app).
 
 > **Note:** To re-upload an updated package, with the same `id`, click the 'Replace' icon at the end of the tab's table row.  Don't click 'Upload' again: Microsoft Teams will say the tab already exists.
@@ -88,9 +88,8 @@ In order to protect customer data, Microsoft Teams requires all tab pages and co
 
 [Set up an IIS website](https://support.microsoft.com/en-us/kb/323972)
 
-
 ## Copyright
-Copyright (c) 2017 Microsoft Corporation. All rights reserved.
 
+Copyright (c) 2017 Microsoft Corporation. All rights reserved.
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
