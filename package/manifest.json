@@ -12,7 +12,7 @@
   },
   "tabs" : [{
     "id": "5bebb729-cf47-4937-b4b2-8f9b818d9655",
-    "name": "Maps",
+    "name": "Teams Simple Tab",
     "description" : {
       "short": "Host a map as a tab.",
       "full": "Host a map as a tab. Select Bing Maps or Google Maps, and click Save."
