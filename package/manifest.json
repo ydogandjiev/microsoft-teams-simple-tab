@@ -1,33 +1,55 @@
 {
-  "$schema": "https://statics.teams.microsoft.com/sdk/v0.4/manifest/MicrosoftTeams.schema.json",
-  "manifestVersion": "0.4",
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.2",
+  "version": "0.1",
   "id": "5bebb729-cf47-4937-b4b2-8f9b818d9655",
-  "version": "1.0",
-  "name": "Teams Simple Tab",
+  "packageName": "com.skype.teams.testtab",
   "developer": {
-      "name": "Example company",   
-      "websiteUrl": "http://www.example.com",
-      "privacyUrl": "http://www.example.com/privacy",
-      "termsOfUseUrl": "http://www.example.com/termsofuse"
+    "name": "Example company",
+    "websiteUrl": "http://www.example.com",
+    "privacyUrl": "http://www.example.com/privacy",
+    "termsOfUseUrl": "http://www.example.com/termsofuse"
   },
-  "tabs" : [{
-    "id": "5bebb729-cf47-4937-b4b2-8f9b818d9655",
-    "name": "Teams Simple Tab",
-    "description" : {
-      "short": "Host a map as a tab.",
-      "full": "Host a map as a tab. Select Bing Maps or Google Maps, and click Save."
-    },
-    "icons": {
-      "44": "maps44.png",
-      "88": "maps88.png"
-    },
-    "accentColor" : "#223344",
-    "configUrl": "https://teams-simple-tab.azurewebsites.net/tabconfig.html",
-    "canUpdateConfig": true
-  }],
-  "needsIdentity": false,
+  "name": {
+    "short": "Teams Simple Tab"
+  },
+  "description": {
+    "short": "Host a map as a tab.",
+    "full": "Host a map as a tab. Select Bing Maps or Google Maps, and click Save."
+  },
+  "icons": {
+    "outline": "maps44.png",
+    "color": "maps88.png"
+  },
+  "accentColor": "#223344",
+  "staticTabs": [
+    {
+      "entityId": "simple-tab",
+      "name": "Simple Tab",
+      "contentUrl": "https://teams-simple-tab.azurewebsites.net/index.html",
+      "websiteUrl": "https://teams-simple-tab.azurewebsites.net/index.html",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://teams-simple-tab.azurewebsites.net/tabconfig.html",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
   "validDomains": [
-      "*.bing.com",
-      "*.google.com"
+    "*.bing.com",
+    "*.google.com",
+    "teams-simple-tab.azurewebsites.net",
+    "teams-test-tab.azurewebsites.net"
   ]
 }
