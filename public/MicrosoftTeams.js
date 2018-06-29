@@ -855,7 +855,7 @@
           var messageOrigin = evt.origin || evt.originalEvent.origin;
           if (messageSource === currentWindow ||
               (messageOrigin !== currentWindow.location.origin &&
-                  validHostRegEx.test(messageOrigin.toLowerCase()))) {
+                  !validHostRegEx.test(messageOrigin.toLowerCase()))) {
               return;
           }
           // Update our parent and child relationships based on this message
