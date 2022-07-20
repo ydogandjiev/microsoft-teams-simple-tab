@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript">
-      microsoftTeams.initialize().then(() => {
+      microsoftTeams.initialize(() => {
         microsoftTeams.settings.registerOnRemoveHandler(function(removeEvent) {
           var radios = document.getElementsByName('removetype');
           if (radios[0].checked) {

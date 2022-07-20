@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript">
-      microsoftTeams.initialize().then(() => {
+      microsoftTeams.initialize(() => {
         microsoftTeams.settings.registerOnSaveHandler(function(saveEvent) {
           var radios = document.getElementsByName('maptype');
           if (radios[0].checked) {
