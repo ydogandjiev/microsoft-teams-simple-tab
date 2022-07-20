@@ -10,14 +10,15 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript">
-      microsoftTeams.initialize();
-      microsoftTeams.settings.registerOnRemoveHandler(function(removeEvent) {
-        var radios = document.getElementsByName('removetype');
-        if (radios[0].checked) {
-          // Delete the map and all its data from the underlying service.
-        }
-        removeEvent.notifySuccess();
-      });
+      microsoftTeams.initialize().then(() => {
+        microsoftTeams.settings.registerOnRemoveHandler(function(removeEvent) {
+          var radios = document.getElementsByName('removetype');
+          if (radios[0].checked) {
+            // Delete the map and all its data from the underlying service.
+          }
+          removeEvent.notifySuccess();
+        });
+      });
 
       function onClick() {
         microsoftTeams.settings.setValidityState(true);
